@@ -1,0 +1,29 @@
+body{
+    background-color: aqua;
+}
+.whitebox{
+    margin: 1vh 1vw;
+    background-color: white;
+    display: inline-block;
+    height: 15vh;
+    width: 11vw;
+
+}
+.imgbox{
+    background-image: url(./ph1.avif);
+    height: 14vh;
+    width: 10vw;
+    position: relative;
+    top: 0.5vh;
+    left: 0.5vw;
+    cursor: pointer;
+}
+.hold{
+    border: 2px solid red;
+}
+.hide{
+    display: none;
+} 
+.dashed{
+    border-style: dashed;
+}
