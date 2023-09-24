@@ -18,6 +18,8 @@ router.get('/list',async (req,res)=>{
 })
 
 
+
+
 router.post('/register',async(req,res)=>{
 
     const emailexist=await UserModel.findOne({email:req.body.email});
