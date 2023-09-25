@@ -9,7 +9,6 @@ const cors=require("cors")
 const mongoose=require("mongoose")
 const port = 4000
 
-
 dotenv.config();
 //  app.use("",listingRoutes);
 //  app.use(express.json())

@@ -7,5 +7,4 @@ const listeningschema=new mongoose.Schema({
     details:String,
 });
 
-
 module.exports=mongoose.model("listingmodel",listeningschema);

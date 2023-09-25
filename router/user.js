@@ -6,7 +6,6 @@ const usermodel = require("../model/usermodel");
 
 
 
-
 router.get('/list',async (req,res)=>{
     try {
         const listingfind=await UserModel.find()
@@ -64,5 +63,5 @@ router.post('/register',async(req,res)=>{
             const token =jwt.sign({_id:user._id},process.env.TOKEN_SECRECT)
          res.header("auth-token",token).send({token:token})
     })
-
+    
 module.exports=router
