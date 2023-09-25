@@ -1,0 +1,23 @@
+<div class="container ms-aut0">
+   <h5 class="text-center my-2">Add listing</h5>
+   <div class="form-wrap">
+      <form [formGroup]="listingform" (ngSubmit)="newlisting()">
+         <div class="text-center my-2">
+            <input id="title" type="text" placeholder="add a title " formControlName="title" pattern="^[a-z\_\.\-]+$"
+               #title />
+         </div>
+         <div class="text-center my-2">
+            <input type="text" placeholder="add a price " formControlName="price" pattern="^[0-9\.]+$" />
+         </div>
+         <div class="text-center my-2">
+            <input type="text" placeholder="add a locality " formControlName="locality" />
+         </div>
+         <div class="text-center my-2">
+            <input type="text" placeholder="add a details " formControlName="details" pattern="^[a-z]+$" />
+         </div>
+         <div class="text-center my-2">
+            <input type="submit" class="btn btn-success" value="Add listing" [disabled]="!listingform.valid" />
+         </div>
+      </form>
+   </div>
+</div>

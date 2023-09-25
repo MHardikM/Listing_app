@@ -1,0 +1,14 @@
+<div class="form-wrap container my-3 w-25 ms-auto">
+    <div class="bg-secondary">
+    <h3 class="text-center">User Register</h3>
+    <form [formGroup]="registerform" (ngSubmit)="userregister()" >
+        <div class="my-2 text-center">
+        <input type="text"  placeholder="enter your name" formControlName="name"></div>
+        <div class="my-2 text-center">
+        <input type="email" placeholder="enter your email" formControlName="email"></div>
+        <div class="my-2 text-center"><input type="password" placeholder="enter your password" formControlName="password"></div>
+        <div  class="text-center">
+        <input type="submit" value="Register" class="my-3" [disabled]="!registerform.valid"></div>
+    </form>
+</div>
+</div>

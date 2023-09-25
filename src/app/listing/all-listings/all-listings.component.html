@@ -1,0 +1,28 @@
+
+
+<div class="container p-3 m-auto" >
+<table class="table table-bordered border-primary">
+  <thead>
+    <tr>
+      <th scope="col">SrNo</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Locality</th>
+      <th scope="col">Details</th>
+      <th scope="col" *ngIf="userservice.loggedin()">Edit/Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="listings$ | async as listings">
+    <tr *ngFor="let item of listings;index as i" >
+      <th scope="row">{{i+1}}</th>
+      <td>{{item.title}}</td>
+      <td>{{item.price}}</td>
+      <td>{{item.locality}}</td>
+      <td>{{item.details}}</td>
+      <td  *ngIf="userservice.loggedin()"><a   [routerLink]="item._id" *ngIf="userservice.loggedin()" class="btn btn-sm btn-outline-info text-black mx-2">Edit</a>
+        <button class="btn  btn-sm btn-outline-danger mx-2" *ngIf="userservice.loggedin()"  (click)="removelisting(item._id)">delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

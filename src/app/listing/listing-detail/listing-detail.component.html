@@ -1,0 +1,27 @@
+
+<div class="card container ms-auto my-3 bg-info" style="width: 18rem;" >
+    <div class="card-body">
+        <h5> title: {{listing.title}}</h5>
+        <h5>price: {{listing.price}}</h5>
+        <h5> details: {{listing.details}}</h5>
+        <h5> locality: {{listing.locality}}</h5>
+        <!-- <button class="btn btn-danger mx-2" *ngIf="userservice.loggedin()" (click)="removelisting()">Delete</button> -->
+    </div>
+  </div>
+
+
+  <!-- *ngIf="showform" -->
+  <div class="container ms-aut0" >
+    <h5 class="text-center my-2">Edit listing</h5>
+
+      <div class="foem-wrap">
+         <form [formGroup]="editlistingform" (ngSubmit)="editlisting()">
+          <div class="text-center my-2"> <input type="text" placeholder="add a title " [(ngModel)]="listing.title" formControlName="title"> </div>
+          <div class="text-center my-2"> <input type="text" placeholder="add a price " [(ngModel)]="listing.price" formControlName="price"> </div>
+          <div class="text-center my-2"> <input type="text" placeholder="add a locality "  [(ngModel)]="listing.locality"formControlName="locality"> </div>
+          <div class="text-center my-2"> <input type="text" placeholder="add a details " [(ngModel)]="listing.details" formControlName="details"> </div>
+          <div class="text-center my-2"><input type="submit"  *ngIf="userservice.loggedin()" class="btn btn-success" value="Edit listing" [disabled]="!editlistingform.valid"> </div>
+         </form>
+      </div>
+ 
+</div>

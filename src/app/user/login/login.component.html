@@ -1,0 +1,16 @@
+<div class="container my-3">
+    <div class="ms-auto">
+    <h3 class="text-center my-3">User Login</h3>
+    <form [formGroup]="loginform" (ngSubmit)="userlogin()">
+        <div class="text-center my-2">
+            <input type="email" placeholder="enter your email" formControlName="email">
+        </div>
+        <div class="text-center my-2">
+            <input type="password" placeholder="enter your password" formControlName="password">
+        </div>
+        <div class="text-center my-2">
+            <input type="submit" value="Login" [disabled]="!loginform.valid">
+        </div>
+    </form>
+</div>
+</div>
